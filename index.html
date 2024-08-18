@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Bài tập hàm</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="./index.css">
+
+
+</head>
+
+<body>
+    <div class="container">
+
+        <h1 class="text-uppercase text-center bg-black text-white">Bài tập hàm</h1>
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <button class="nav-link active" id="nav-bai1-tab" data-bs-toggle="tab" data-bs-target="#nav-bai1"
+                    type="button" role="tab" aria-controls="nav-bai1" aria-selected="true">Bài 1</button>
+                <button class="nav-link" id="nav-bai2-tab" data-bs-toggle="tab" data-bs-target="#nav-bai2" type="button"
+                    role="tab" aria-controls="nav-bai2" aria-selected="false">Bài 2</button>
+                <button class="nav-link" id="nav-bai3-tab" data-bs-toggle="tab" data-bs-target="#nav-bai3" type="button"
+                    role="tab" aria-controls="nav-bai3" aria-selected="false">Bài 3</button>
+                <button class="nav-link" id="nav-bai4-tab" data-bs-toggle="tab" data-bs-target="#nav-bai4" type="button"
+                    role="tab" aria-controls="nav-bai4" aria-selected="false">Bài 4</button>
+            </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+            <!-- Bài 1  -->
+            <div class="tab-pane fade show active" id="nav-bai1" role="tabpanel" aria-labelledby="nav-bai1-tab"
+                tabindex="0">
+                <h2 class="my-3">🏫 Quản lý tuyển sinh</h2>
+                <div class="container">
+                    <div class="row row-cols-3 gy-3">
+                        <div class="col">
+                            <input type="number" class="form-control" id="diemChuan" placeholder="điểm chuẩn">
+                        </div>
+                        <div class="col">
+                            <select class="form-select" id="chonKhuVuc">
+                                <option selected>Chọn khu vực </option>
+                                <option value="1">A</option>
+                                <option value="2">B</option>
+                                <option value="3">C</option>
+                            </select>
+                        </div>
+                        <div class="col"> <select class="form-select" id="chonDoiTuong">
+                                <option selected>Chọn đối tượng </option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select></div>
+                        <div class="col">
+                            <input type="number" class="form-control" id="diemMon1" placeholder="điểm môn thứ 1">
+                        </div>
+                        <div class="col"><input type="number" class="form-control" id="diemMon2"
+                                placeholder="điểm môn thứ 2"></div>
+                        <div class="col">
+                            <input type="number" class="form-control w-30 col" id="diemMon3"
+                                placeholder="điểm môn thứ 3">
+                        </div>
+                    </div>
+                    <button class="btn btn-primary mt-3" id="btnketQua"> Kết Quả </button>
+
+                </div>
+                <div class="alert alert-success mt-3 container" role="alert">
+                    <p id="ketQua" class="alert-success align-content-center">👉</p>
+                </div>
+                <div class="alert-info" role="alert">
+                    <h3>Notes: </h3>
+                    <p>Khu vực A được +2 điểm <br> Khu vực B được +1 điểm <br> Khu vực C được + 0.5 điểm.
+                    </p>
+                    <hr>
+                    <p>Đối tượng 1 được +2.5 điểm <br> Đối tượng 2 được +1.5 điểm <br> Đối tượng 3 được +1 điểm</p>
+                </div>
+            </div>
+            <!-- Bài 2  -->
+            <div class="tab-pane fade" id="nav-bai2" role="tabpanel" aria-labelledby="nav-bai2-tab" tabindex="0">
+                <div class="container">
+                    <h2 class="my-3">🔋 Tính tiền điện</h2>
+                    <div class="row row-cols-2 gy-2">
+                        <div class="col">
+                            <input type="text" class="form-control" name="" id="hoTen" aria-describedby="helpId"
+                                placeholder="Nhập họ tên" />
+                        </div>
+                        <div class="col">
+                            <input type="number" class="form-control" id="soKw" placeholder="Nhập số KW" />
+                        </div>
+                    </div>
+                    <button class="btn btn-dark mt-3" id="btnTienDien"> Tính Tiền Điện </button>
+                    <div class="alert alert-success mt-3 container" role="alert">
+                        <p id="soTienDien" class="alert-success align-content-center">👉</p>
+                    </div>
+                    <div class="alert-info" role="alert">
+                        <h3>Bậc thang tính tiền điện </h3>
+                        <ul>
+                            <li>Từ 0 đến 50 kWh: 500 đơn vị/kWh</li>
+                            <li>Từ 51 đến 100 kWh: 650 đơn vị/kWh</li>
+                            <li>Từ 101 đến 200 kWh: 850 đơn vị/kWh</li>
+                            <li>Từ 201 đến 350 kWh: 1,100 đơn vị/kWh</li>
+                            <li>Từ 351 kWh trở lên: 1,300 đơn vị/kWh</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Bài 3 -->
+            <div class="tab-pane fade" id="nav-bai3" role="tabpanel" aria-labelledby="nav-bai3-tab" tabindex="0">
+                <h2 class="my-3">💰 Tính thuế thu nhập cá nhân
+                </h2>
+                <div class="row row-cols-3">
+                    <div class="col">
+                        <input type="text" class="form-control" id="fullName" placeholder="Nhập họ và tên">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" id="tongThuNhapNam"
+                            placeholder="Nhập tổng thu nhập năm">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" id="soNguoiPhuThuoc" placeholder="Số người phụ thuộc">
+                    </div>
+                </div>
+                <br>
+                <button class="btn btn-warning" id="btnTinhThue">Tính Thuế</button>
+                <br>
+                <div class="alert alert-success mt-2" role="alert">
+                    <p id="ketQuaThue" class="alert-success align-content-center">👉</p>
+                </div>
+                <div class="note my-2">
+                    <h4>Bậc tính thuế</h4>
+                    <table class="table table-bordered w-75">
+                        <thead>
+                            <tr>
+                                <th scope="col">Bậc thuế</th>
+                                <th scope="col">Thu nhập tính thuế/ năm ( triệu đồng )</th>
+                                <th scope="col">Thuế suất</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>đến 60</td>
+                                <td>5%</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Trên 60 đến 120</td>
+                                <td>10%</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Trên 120 đến 216</td>
+                                <td>15%</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>Trên 216 đến 384</td>
+                                <td>20%</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>Trên 384 đến 624</td>
+                                <td>25%</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">6</th>
+                                <td>Trên 624 đến 960 </td>
+                                <td>30%</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">7</th>
+                                <td>Trên 960 </td>
+                                <td>35%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <span> <i>*Mỗi người phụ thuộc hợp lệ sẽ được giảm trừ 4,4 triệu/ tháng </i> </span>
+                    <br><span> <i>*Tổng thu nhập năm tối thiểu phải ở mức 4,5 triệu đồng </i> </span>
+
+                </div>
+            </div>
+
+        </div>
+        <!-- Bài 4  -->
+        <div class="tab-pane fade" id="nav-bai4" role="tabpanel" aria-labelledby="nav-bai4-tab" tabindex="0">
+            <div class="container">
+                <h2 class="my-3">🕸️ Tính tiền cáp
+                </h2>
+                <div class="row row-cols-4 gy-3">
+                    <div class="col-6">
+                        <select class="form-select" id="loaiKhachHang" onchange="hienSoKetNoi()">
+                            <option selected value="default">Chọn loại khách hàng </option>
+                            <option value="home">Nhà Dân</option>
+                            <option value="business">Doanh nghiệp</option>
+                        </select>
+                    </div>
+                    <div class="col-6">
+                        <input type="text" class="form-control" id="maKhachHang" placeholder="Nhập mã KH">
+                    </div>
+                    <div class="col-6">
+                        <input type="text" class="form-control" id="soKenh" placeholder="Số kênh cao cấp">
+                    </div>
+                    <!-- field chỉ hiện khi danh nghiệp được chọn  -->
+                    <div class="col-6">
+                        <input type="number" class="form-control" id="soKetNoi" placeholder="Số kết nối"
+                            style="display: none;">
+
+                    </div>
+                </div>
+                <br>
+                <button class="btn btn-outline-dark" id="btnTinhTienCap">Tính tiền cáp</button>
+            </div>
+            <div class="alert alert-success mt-2" role="alert">
+                <p id="tienCap" class="alert-success align-content-center">👉</p>
+            </div>
+
+            <div class="alert alert-primary mt-2" role="alert">
+                <h4>Notes</h4>
+                <span style="color: teal;"> <b>Nếu là thuê bao Doanh nghiệp:</b></span>
+                <ul>
+                    <li>Số kết nối mặc định từ 1 - 10: $75</li>
+                    <li>Từ kết nối thứ 11: $5/ kết nối</li>
+                    <li>Mặc định phí mạng là: $15 </li>
+                    <li>Phí kênh cao cấp doanh nghiệp: $50/ kênh </li>
+
+                </ul>
+                <span style="color: teal;"> <b>Nếu là thuê bao Nhà Dân</b></span>
+                <ul>
+                    <li>Mặc định phí cáp là: $25 </li>
+                    <li>Số kênh cao cấp: $7.5 / kênh</li>
+                </ul>
+
+
+            </div>
+        </div>
+
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
